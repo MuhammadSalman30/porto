@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Muhammad Salman Faras Khairyandena — Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F6F4EF; --bg-raised:#FFFFFF; --ink:#161A16; --ink-soft:#4B5249;
+  --line:#DCD8CC; --accent:#0F6E5C; --accent-soft:#DCEEE8; --mono-bg:#12171A;
+  padding-top: env(safe-area-inset-top,0px); padding-bottom: env(safe-area-inset-bottom,0px);
+  box-sizing:border-box;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#12140F; --bg-raised:#1B1E17; --ink:#EDEAE0; --ink-soft:#ABB2A4;
+    --line:#33362C; --accent:#3FD1AE; --accent-soft:#1B2E28; --mono-bg:#0B0D0A;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#12140F; --bg-raised:#1B1E17; --ink:#EDEAE0; --ink-soft:#ABB2A4;
+  --line:#33362C; --accent:#3FD1AE; --accent-soft:#1B2E28; --mono-bg:#0B0D0A;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:env(safe-area-inset-top,0px); scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+.wrap{max-width:880px;margin:0 auto;padding:0 24px}
+a{color:var(--accent)}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* nav */
+nav{position:sticky;top:0;padding-top:env(safe-area-inset-top,0px);background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:10}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:58px;max-width:880px}
+.brand{font-weight:600;font-size:14px;letter-spacing:.01em}
+.navlinks{display:flex;gap:22px;font-size:13px}
+.navlinks a{color:var(--ink-soft);text-decoration:none}
+.navlinks a:hover{color:var(--accent)}
+
+/* hero */
+.hero{padding:76px 0 56px;border-bottom:1px solid var(--line)}
+.eyebrow{font-size:13px;color:var(--accent);margin:0 0 14px}
+h1{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(34px,5.4vw,54px);line-height:1.08;margin:0 0 18px;max-width:11ch}
+.role{font-size:17px;color:var(--ink-soft);margin:0 0 22px;max-width:52ch}
+.pitch{font-size:16px;max-width:56ch;margin:0 0 30px}
+.contact-row{display:flex;flex-wrap:wrap;gap:10px}
+.chip{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);padding:8px 14px;border-radius:100px;font-size:13px;text-decoration:none;color:var(--ink)}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+
+/* sections */
+section{padding:56px 0;border-bottom:1px solid var(--line)}
+.kicker{font-size:12px;color:var(--ink-soft);margin:0 0 8px}
+h2{font-family:'Fraunces',serif;font-weight:600;font-size:28px;margin:0 0 28px}
+
+/* about + skills */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:48px}
+.about-grid p{margin:0 0 14px;max-width:58ch}
+.skill-group{margin-bottom:20px}
+.skill-group h3{font-size:12px;text-transform:none;color:var(--ink-soft);margin:0 0 10px;font-weight:500}
+.tags{display:flex;flex-wrap:wrap;gap:7px}
+.tag{font-family:'JetBrains Mono',monospace;font-size:12px;background:var(--bg-raised);border:1px solid var(--line);padding:5px 10px;border-radius:6px}
+
+/* experience */
+.job{display:grid;grid-template-columns:150px 1fr;gap:22px;padding:22px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:none}
+.job time{font-size:13px;color:var(--ink-soft)}
+.job h3{margin:0 0 4px;font-size:17px}
+.job .role-sub{font-size:13px;color:var(--accent);margin:0 0 10px}
+.job p{margin:0;font-size:14.5px;color:var(--ink-soft);max-width:56ch}
+
+/* featured project */
+.frame{background:var(--mono-bg);border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-bottom:26px}
+.frame-bar{display:flex;align-items:center;gap:6px;padding:10px 14px;border-bottom:1px solid rgba(255,255,255,.08)}
+.dot{width:9px;height:9px;border-radius:50%;background:rgba(255,255,255,.18)}
+.frame-url{margin-left:8px;font-family:'JetBrains Mono',monospace;font-size:11.5px;color:rgba(255,255,255,.45)}
+.frame-body{padding:34px 28px;min-height:200px;display:flex;flex-direction:column;justify-content:center;gap:10px}
+.frame-body .ph-line{height:10px;border-radius:4px;background:rgba(255,255,255,.08)}
+.frame-note{padding:10px 14px;font-size:11.5px;color:rgba(255,255,255,.35);border-top:1px solid rgba(255,255,255,.08);font-family:'JetBrains Mono',monospace}
+
+.feature-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:26px 0}
+.feature-card{background:var(--bg-raised);border:1px solid var(--line);border-radius:10px;padding:18px}
+.feature-card h4{margin:0 0 8px;font-size:14.5px}
+.feature-card p{margin:0;font-size:13px;color:var(--ink-soft)}
+
+/* project cards */
+.proj-list{display:flex;flex-direction:column;gap:16px}
+.proj{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:center;border:1px solid var(--line);border-radius:12px;padding:18px;background:var(--bg-raised)}
+.proj-frame{background:var(--mono-bg);border-radius:8px;overflow:hidden}
+.proj-frame .frame-bar{padding:7px 10px}
+.proj-frame .frame-url{font-size:10px}
+.proj-frame .frame-body{padding:16px;min-height:70px;gap:6px}
+.proj-frame .ph-line{height:6px}
+.proj h3{margin:0 0 4px;font-size:16px}
+.proj .sub{font-size:12.5px;color:var(--ink-soft);margin:0 0 10px}
+.proj .stack{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--accent);margin:0 0 6px}
+.proj a.visit{font-size:12.5px;text-decoration:none;font-weight:500}
+
+footer{padding:50px 0 60px}
+footer h2{margin-bottom:14px}
+footer p{max-width:52ch;color:var(--ink-soft);margin:0 0 24px}
+.copy{margin-top:40px;font-size:12px;color:var(--ink-soft)}
+
+@media (max-width: 720px){
+  .about-grid{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:6px}
+  .feature-grid{grid-template-columns:1fr}
+  .proj{grid-template-columns:1fr}
+  .navlinks{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <span class="brand">MSFK</span>
+  <div class="navlinks">
+    <a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Work</a><a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+  <p class="eyebrow mono">Portfolio / 2026</p>
+  <h1>Muhammad Salman Faras Khairyandena</h1>
+  <p class="role">Software Engineer — Full-Stack Web Developer</p>
+  <p class="pitch">I build practical web applications that turn real business needs into reliable, working software — from product catalogs to sales systems for small businesses.</p>
+  <div class="contact-row">
+    <a class="chip" href="mailto:salmanfaras30@gmail.com">salmanfaras30@gmail.com</a>
+    <a class="chip" href="tel:+6285716955131">+62 857 1695 5131</a>
+    <a class="chip" href="https://www.linkedin.com/in/muhammad-salman-faras-khairyandena-b33a1329b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</div></header>
+
+<section id="about"><div class="wrap">
+  <p class="kicker mono">01 — About</p>
+  <h2>Entry-level engineer, hands-on with real products</h2>
+  <div class="about-grid">
+    <div>
+      <p>I'm an entry-level Software Engineer with hands-on experience developing full-stack web applications using PHP, CodeIgniter 4, MySQL, and related web technologies. I've built practical business systems — product catalogs, sales tracking, company profile sites — translating what a business actually needs into software that works.</p>
+      <p>I'm looking for a development role where I can keep sharpening these skills, learn from experienced teams, and grow into AI-assisted tooling, testing, and modern JavaScript ecosystems.</p>
+    </div>
+    <div>
+      <div class="skill-group">
+        <h3>Web Development</h3>
+        <div class="tags"><span class="tag">PHP</span><span class="tag">CodeIgniter 4</span><span class="tag">Laravel</span><span class="tag">Next.js</span><span class="tag">Node.js</span><span class="tag">Tailwind CSS</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Data & Integration</h3>
+        <div class="tags"><span class="tag">MySQL / SQL</span><span class="tag">MongoDB</span><span class="tag">REST API</span><span class="tag">Git / GitHub</span></div>
+      </div>
+      <div class="skill-group">
+        <h3>Quality & Practice</h3>
+        <div class="tags"><span class="tag">QA & Testing</span><span class="tag">Debugging</span><span class="tag">Agile / Scrum</span></div>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<section id="experience"><div class="wrap">
+  <p class="kicker mono">02 — Experience</p>
+  <h2>Where I've worked</h2>
+
+  <div class="job">
+    <time>Sep 2023 – Mar 2026</time>
+    <div>
+      <h3>Tax Center Gunadarma</h3>
+      <p class="role-sub">IT Team / IT Staff</p>
+      <p>Built and developed 5 web-based applications for UMKM (small and medium businesses), including product catalog systems and a sales tracking application with profit and HPP calculation — using PHP, MySQL, and CodeIgniter, focused on functional, reliable solutions for real business needs.</p>
+    </div>
+  </div>
+  <div class="job">
+    <time>Apr 2023 – Sep 2023</time>
+    <div>
+      <h3>Information System Laboratory</h3>
+      <p class="role-sub">Laboratory Assistant</p>
+      <p>Supported Information Systems lab activities, prepared practicum sessions, and guided students through materials and assigned tasks.</p>
+    </div>
+  </div>
+
+  <p class="kicker mono" style="margin-top:36px">Education</p>
+  <div class="job" style="border-top:1px solid var(--line);padding-top:22px">
+    <time>2026</time>
+    <div>
+      <h3>Bachelor Degree, Informatics</h3>
+      <p class="role-sub">Gunadarma University</p>
+      <p>GPA 3.66 / 4.00</p>
+    </div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <p class="kicker mono">03 — Featured Project</p>
+  <h2>MamaHealth — Decision support & healthy menu recommendation</h2>
+
+  <div class="frame">
+    <div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame-url">mamahealth.app · thesis project</span></div>
+    <div class="frame-body">
+      <div class="ph-line" style="width:38%"></div>
+      <div class="ph-line" style="width:70%"></div>
+      <div class="ph-line" style="width:55%"></div>
+    </div>
+    <div class="frame-note">Live preview not yet linked — placeholder frame, swap for a real screenshot anytime.</div>
+  </div>
+
+  <p style="max-width:62ch">A web-based decision support and recommendation system built for a thesis project. It ranks healthy-menu alternatives for pregnant women using the Simple Additive Weighting (SAW) method, then uses Generative AI to turn the selected result into personalized recipe guidance.</p>
+
+  <div class="feature-grid">
+    <div class="feature-card"><h4>SAW Recommendation</h4><p>Ranks menu alternatives across protein, calcium, iron, folate, and estimated price.</p></div>
+    <div class="feature-card"><h4>Generative AI</h4><p>Prompt-engineered with the Google Gemini API to produce recipe guidance and adapt to allergy history.</p></div>
+    <div class="feature-card"><h4>Bunda AI & Ngidam</h4><p>Chat-based consultation that evaluates cravings and suggests healthier alternatives.</p></div>
+  </div>
+  <div class="tags"><span class="tag">PHP</span><span class="tag">CodeIgniter 4</span><span class="tag">MySQL</span><span class="tag">SAW</span><span class="tag">Google Gemini API</span><span class="tag">Prompt Engineering</span></div>
+
+  <p class="kicker mono" style="margin-top:52px">Business Web Applications</p>
+  <h2 style="font-size:22px">Selected projects for UMKM and business workflows</h2>
+
+  <div class="proj-list">
+    <div class="proj">
+      <div class="proj-frame"><div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame-url">umkmmekari.com</span></div><div class="frame-body"><div class="ph-line" style="width:60%"></div><div class="ph-line" style="width:40%"></div></div></div>
+      <div>
+        <h3>UMKM Mekari — Product Catalog Website</h3>
+        <p class="sub">Catalog platform for UMKM Mekarsari featuring product photos, descriptions, pricing, and seller contact.</p>
+        <p class="stack">CI4 · SQL · GitHub</p>
+        <a class="visit" href="https://umkmmekari.com" target="_blank" rel="noopener">Visit site →</a>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-frame"><div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame-url">ubermanpocin.com</span></div><div class="frame-body"><div class="ph-line" style="width:55%"></div><div class="ph-line" style="width:35%"></div></div></div>
+      <div>
+        <h3>UMKM Pondok Cina — Product Catalog Website</h3>
+        <p class="sub">Catalog platform for UMKM Pondok Cina featuring product photos, descriptions, pricing, and seller contact.</p>
+        <p class="stack">CI4 · SQL · GitHub</p>
+        <a class="visit" href="https://ubermanpocin.com" target="_blank" rel="noopener">Visit site →</a>
+      </div>
+    </div>
+    <div class="proj">
+      <div class="proj-frame"><div class="frame-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span class="frame-url">catatpenjualan.com</span></div><div class="frame-body"><div class="ph-line" style="width:65%"></div><div class="ph-line" style="width:30%"></div></div></div>
+      <div>
+        <h3>Catat Penjualan — Sales Management Web App</h3>
+        <p class="sub">Business tool for tracking sales and calculating profit, expenses, and HPP for day-to-day operations.</p>
+        <p class="stack">CI4 · SQL · GitHub</p>
+        <a class="visit" href="https://catatpenjualan.com/login" target="_blank" rel="noopener">Visit site →</a>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<footer id="contact"><div class="wrap">
+  <p class="kicker mono">04 — Contact</p>
+  <h2>Ready to learn & contribute</h2>
+  <p>I'm especially interested in roles where I can deepen my full-stack engineering skills, contribute to real products, and grow into AI, automation, testing, and modern JavaScript ecosystems.</p>
+  <div class="contact-row">
+    <a class="chip" href="mailto:salmanfaras30@gmail.com">Email me</a>
+    <a class="chip" href="tel:+6285716955131">Call / WhatsApp</a>
+    <a class="chip" href="https://www.linkedin.com/in/muhammad-salman-faras-khairyandena-b33a1329b" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+  <p class="copy mono">Muhammad Salman Faras Khairyandena — Software Engineer Portfolio</p>
+</div></footer>
+
+</body>
+</html>
